@@ -1,25 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  --firstplayerbg: #db222a;
+  --secondplayerbg: #1d3557;
+  overflow: hidden;
+  --lower-bg-animation-speed: 0.5s;
+}
+
 .h100 {
-    /* display: block; */
-    height: 50vh;
+  /* display: block; */
+  height: 50vh;
 }
 
-#scissors{
-    background: center/contain no-repeat url(../img/scissors.svg);
-    width: 5rem;
-    height: 5rem;
-    margin: 1rem;
+#scissors {
+  background: center/contain no-repeat url(../img/scissors.svg);
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
 }
 
-#rock{
-    background: center/contain no-repeat url(../img/stone.svg);
-    width: 5rem;
-    height: 5rem;
-    margin: 1rem;
+#rock {
+  background: center/contain no-repeat url(../img/stone.svg);
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
 }
 
-#paper{
-    background: center/contain no-repeat url(../img/paper.svg);
-    width: 5rem;
-    height: 5rem;
-    margin: 1rem;
+#paper {
+  background: center/contain no-repeat url(../img/paper.svg);
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
 }
+
+#lower-bg {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+#first-player-bg {
+  height: 100vh;
+  width: 60vw;
+  transform: skewX(-15deg);
+  background-color: var(--firstplayerbg);
+  display: inline-block;
+  position: absolute;
+  animation: first-player-bg-animation var(--lower-bg-animation-speed) forwards
+    ease-in;
+}
+
+#second-player-bg {
+  height: 100vh;
+  width: 60vw;
+  transform: skewX(-15deg);
+  background-color: var(--secondplayerbg);
+  display: inline-block;
+  position: absolute;
+  animation: second-player-bg-animation var(--lower-bg-animation-speed) forwards
+    ease-in;
+}
+
+@keyframes first-player-bg-animation {
+  from {
+    margin-left: -70vw;
+  }
+
+  to {
+    margin-left: -10vw;
+  }
+}
+
+@keyframes second-player-bg-animation {
+  from {
+    margin-left: 110vw;
+  }
+
+  to {
+    margin-left: 49.9vw;
+  }
+}
+
+
+#first-player-card {
+    height: 100vh;
+    width: 60vw;
+    transform: skewX(-15deg);
+    background-color: var(--firstplayerbg);
+    display: inline-block;
+    position: absolute;
+    animation: first-player-bg-animation var(--lower-bg-animation-speed) forwards
+      ease-in;
+  }
