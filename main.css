@@ -1,0 +1,25 @@
+.h100 {
+    /* display: block; */
+    height: 50vh;
+}
+
+#scissors{
+    background: center/contain no-repeat url(../img/scissors.svg);
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+}
+
+#rock{
+    background: center/contain no-repeat url(../img/stone.svg);
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+}
+
+#paper{
+    background: center/contain no-repeat url(../img/paper.svg);
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+}
